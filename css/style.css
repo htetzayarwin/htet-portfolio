@@ -966,3 +966,22 @@ section {
     }
 
 }
+
+
+/* Language Switcher */
+.language-switch {
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--border-color);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: var(--font-code);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.language-switch:hover {
+    background: var(--bg-card);
+    border-color: var(--color-accent);
+}

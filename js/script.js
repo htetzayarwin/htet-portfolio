@@ -122,3 +122,74 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// Language Switcher
+const languageSwitch = document.getElementById("language-switch");
+
+// Default language
+let currentLanguage = "en";
+
+// Language translations
+const translations = {
+    en: {
+        home: "Home",
+        about: "About",
+        skills: "Skills",
+        projects: "Projects",
+        contact: "Contact"
+    },
+
+    ja: {
+        home: "ホーム",
+        about: "自己紹介",
+        skills: "スキル",
+        projects: "プロジェクト",
+        contact: "お問い合わせ"
+    }
+};
+
+
+// Language Switcher
+const languageSwitch = document.getElementById("language-switch");
+
+// Current language
+let currentLanguage = "en";
+
+// Translation dictionary
+const translations = {
+    en: {
+        home: "Home",
+        about: "About",
+        skills: "Skills",
+        projects: "Projects",
+        certifications: "Certifications",
+        journal: "Lab Journal",
+        contact: "Contact"
+    },
+
+    ja: {
+        home: "ホーム",
+        about: "自己紹介",
+        skills: "スキル",
+        projects: "プロジェクト",
+        certifications: "資格",
+        journal: "学習記録",
+        contact: "お問い合わせ"
+    }
+};
+
+// Change website language
+languageSwitch.addEventListener("click", () => {
+
+    // Toggle between English and Japanese
+    currentLanguage = currentLanguage === "en" ? "ja" : "en";
+
+    // Update all translated elements
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+        element.textContent = translations[currentLanguage][key];
+    });
+
+    // Update button label
+    languageSwitch.textContent = currentLanguage === "en" ? "JP" : "EN";
+});
+
