@@ -985,3 +985,20 @@ section {
     background: var(--bg-card);
     border-color: var(--color-accent);
 }
+/* Terminal blinking cursor animation */
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: cursor-blink 1s steps(2, start) infinite;
+}
+
+/* Cursor blinking effect */
+@keyframes cursor-blink {
+    to {
+        visibility: hidden;
+    }
+}
