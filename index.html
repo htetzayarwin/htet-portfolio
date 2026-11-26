@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="HTET - Networking and Security student focused on network infrastructure, Linux, information security, and cloud technologies.">
+    <meta name="description"
+        content="HTET - Networking and Security student focused on network infrastructure, Linux, information security, and cloud technologies.">
 
     <meta name="theme-color" content="#0B1120">
 
@@ -16,26 +17,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+
     <header class="header" id="header">
 
         <a href="#home" class="logo">
-            HTET<span>.</span>DEV
+            <span class="logo-icon">&lt;/&gt;</span>
+            HTET<span class="logo-dot">.DEV</span>
         </a>
 
-        <!-- Mobile Navigation Button -->
+        <!-- Mobile menu button -->
         <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Toggle navigation"
-                aria-expanded="false">
+            id="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
 
             <span></span>
             <span></span>
@@ -43,22 +50,21 @@
 
         </button>
 
-        <!-- NAVIGATION -->
         <nav class="navbar" id="navbar">
 
             <a href="#home" class="nav-link active" data-i18n="home">Home</a>
             <a href="#about" class="nav-link" data-i18n="about">About</a>
             <a href="#skills" class="nav-link" data-i18n="skills">Skills</a>
+            <a href="#topology" class="nav-link" data-i18n="topology_nav">Topology</a>
             <a href="#projects" class="nav-link" data-i18n="projects">Projects</a>
             <a href="#certifications" class="nav-link" data-i18n="certifications">Certifications</a>
-            <a href="#journal" class="nav-link" data-i18n="journal">Lab Journal</a>
             <a href="#contact" class="nav-link" data-i18n="contact">Contact</a>
 
-            <!-- Language Switcher -->
+            <!-- Language switch -->
             <button id="language-switch"
-                    class="language-switch"
-                    type="button"
-                    aria-label="Switch language">
+                class="language-switch"
+                type="button"
+                aria-label="Switch language">
                 JP
             </button>
 
@@ -70,62 +76,117 @@
     <main>
 
         <!-- =========================================
-             HERO SECTION
+             01. HERO SECTION
         ========================================== -->
 
         <section class="hero" id="home">
 
-            <div class="hero-content reveal">
+            
+          <div class="hero-content reveal">
 
-                <p class="intro">
-                    <span class="status-dot"></span>
-                    <span data-i18n="hero_intro">HELLO, WORLD! I'M</span>
-                </p>
+    <!-- Intro -->
+    <p class="intro">
+        <span class="status-dot"></span>
+        <span data-i18n="hero_intro">HELLO, WORLD! I'M</span>
+    </p>
 
-                <h1>
-                    HTET<span>.</span>
-                </h1>
+    <!-- Personal Brand -->
+    <h1 class="hero-name">
+        HTET<span>.</span>
+    </h1>
 
-                <h2 data-i18n="hero_title">
-                    Aspiring Network & Cloud Infrastructure Engineer
-                </h2>
+    <!-- Career Direction -->
+    <h2 data-i18n="hero_title">
+        Network & Cloud
+        <span>Infrastructure Engineer</span>
+    </h2>
 
-                <p class="description" data-i18n="hero_description">
-                    Networking and Security student based in Japan.
-                    Exploring network infrastructure, information security,
-                    Linux administration, and cloud technologies through
-                    continuous learning and hands-on practice.
-                </p>
+    <!-- Description -->
+    <p class="description" data-i18n="hero_description">
+        A Networking & Security student at Nihon Kogakuin College,
+        interested in building secure, reliable, and scalable
+        IT infrastructure.
+    </p>
 
-                <div class="hero-buttons">
+    <div class="hero-buttons">
 
-                    <a href="#projects" class="btn btn-primary">
-                        <span data-i18n="hero_projects">View Projects</span>
-                        <span>→</span>
-                    </a>
+        <a href="#projects" class="btn btn-primary">
+            <span data-i18n="hero_projects">View Projects</span>
+            <span>→</span>
+        </a>
 
-                    <a href="#contact"
-                       class="btn btn-outline"
-                       data-i18n="hero_contact">
-                        Contact Me
-                    </a>
+        <a href="#contact" class="btn btn-outline">
+            <span data-i18n="hero_contact">Contact Me</span>
+        </a>
 
-                </div>
+    </div>
 
-                <div class="hero-social">
+    <!-- Technical interests -->
+    <div class="hero-tech">
+        <span>⌘ Networking</span>
+        <span>◇ Security</span>
+        <span>☁ Cloud (AWS)</span>
+        <span>$_ Linux</span>
+    </div>
 
-                    <span data-i18n="hero_location">BASED IN JAPAN</span>
-
-                    <span class="separator">/</span>
-
-                    <span data-i18n="hero_field">NETWORKING & SECURITY</span>
-
-                </div>
 
             </div>
 
 
-            <!-- TERMINAL -->
+            <!-- Network visual -->
+            <div class="hero-visual reveal">
+
+                <!-- Network visual -->
+<div class="hero-visual reveal">
+
+    <div class="network-globe">
+
+        <div class="globe-grid"></div>
+
+        <!-- Network Devices -->
+        <div class="globe-node node-cloud">
+            ☁
+            <span class="node-label">CLOUD</span>
+        </div>
+
+        <div class="globe-node node-router">
+            ◈
+            <span class="node-label">ROUTER</span>
+        </div>
+
+        <div class="globe-node node-server">
+            ▤
+            <span class="node-label">SERVER</span>
+        </div>
+
+        <div class="globe-node node-switch">
+            ⌘
+            <span class="node-label">SWITCH</span>
+        </div>
+
+        <!-- Network Connections -->
+        <div class="globe-line line-one"></div>
+        <div class="globe-line line-two"></div>
+        <div class="globe-line line-three"></div>
+
+        <!-- Globe Caption -->
+        <div class="globe-label">
+            NETWORK INFRASTRUCTURE
+        </div>
+
+        <!-- System Status -->
+        <div class="globe-status">
+            <span></span> SYSTEM ONLINE
+        </div>
+
+    </div>
+
+</div>
+
+            </div>
+
+
+            <!-- Terminal -->
             <div class="terminal reveal">
 
                 <div class="terminal-header">
@@ -170,7 +231,8 @@
                     </p>
 
                     <p>
-                        <span class="terminal-user">htet@portfolio</span>:<span class="terminal-path">~</span>$ <span class="terminal-cursor"></span>
+                        <span class="terminal-user">htet@portfolio</span>:<span class="terminal-path">~</span>$
+                        <span class="terminal-cursor"></span>
                     </p>
 
                 </div>
@@ -181,7 +243,274 @@
 
 
         <!-- =========================================
-             ABOUT SECTION
+             02. NETWORK TOPOLOGY
+        ========================================== -->
+
+        <section class="section topology-section" id="topology">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label" data-i18n="topology_label">
+                    01 / NETWORK ARCHITECTURE
+                </p>
+
+                <h2 data-i18n="topology_title">
+                    Network <span>Topology</span>
+                </h2>
+
+                <p class="section-description" data-i18n="topology_description">
+                    Example of an enterprise network architecture.
+                </p>
+
+            </div>
+
+
+            <div class="topology-card reveal">
+
+                <div class="topology-header">
+                    <h3>⌘ Network Architecture</h3>
+                    <span class="demo-label" data-i18n="demo_label">LAB / EXAMPLE</span>
+                </div>
+
+                <div class="topology-flow">
+
+                    <div class="topology-device">
+                        <div class="device-icon">☁</div>
+                        <h4>Internet</h4>
+                        <p>WAN</p>
+                    </div>
+
+                    <div class="topology-connection"></div>
+
+                    <div class="topology-device">
+                        <div class="device-icon firewall-icon">▤</div>
+                        <h4>Firewall</h4>
+                        <p>Security</p>
+                    </div>
+
+                    <div class="topology-connection"></div>
+
+                    <div class="topology-device">
+                        <div class="device-icon">◈</div>
+                        <h4>Router</h4>
+                        <p>Edge</p>
+                    </div>
+
+                    <div class="topology-connection"></div>
+
+                    <div class="topology-device">
+                        <div class="device-icon">⌘</div>
+                        <h4>L3 Switch</h4>
+                        <p>Core</p>
+                    </div>
+
+                    <div class="topology-connection"></div>
+
+                    <div class="topology-endpoints">
+
+                        <div class="endpoint">
+                            <span>▣</span>
+                            <div>
+                                <strong>VLAN 10</strong>
+                                <small>Office</small>
+                            </div>
+                        </div>
+
+                        <div class="endpoint">
+                            <span>▤</span>
+                            <div>
+                                <strong>VLAN 20</strong>
+                                <small>Server</small>
+                            </div>
+                        </div>
+
+                        <div class="endpoint">
+                            <span>▣</span>
+                            <div>
+                                <strong>VLAN 30</strong>
+                                <small>Management</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="topology-note" data-i18n="topology_note">
+                    Illustrative topology for learning purposes.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             03. INFRASTRUCTURE MONITORING
+        ========================================== -->
+
+        <section class="section monitoring-section" id="monitoring">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label" data-i18n="monitor_label">
+                    02 / INFRASTRUCTURE
+                </p>
+
+                <h2 data-i18n="monitor_title">
+                    Infrastructure <span>Monitoring</span>
+                </h2>
+
+                <p class="section-description" data-i18n="monitor_description">
+                    A visual demonstration of infrastructure monitoring concepts.
+                </p>
+
+            </div>
+
+
+            <div class="monitor-dashboard reveal">
+
+                <div class="monitor-header">
+
+                    <h3>Infrastructure Overview</h3>
+
+                    <span class="demo-label" data-i18n="demo_only">
+                        DEMO ONLY · NOT LIVE DATA
+                    </span>
+
+                </div>
+
+
+                <!-- Status cards -->
+                <div class="monitor-status-grid">
+
+                    <article class="monitor-status">
+                        <span class="monitor-icon">⌘</span>
+                        <div>
+                            <strong data-i18n="monitor_network">Network</strong>
+                            <p>Demo Status</p>
+                        </div>
+                        <span class="status-indicator"></span>
+                    </article>
+
+                    <article class="monitor-status">
+                        <span class="monitor-icon">▤</span>
+                        <div>
+                            <strong data-i18n="monitor_servers">Servers</strong>
+                            <p>Demo Status</p>
+                        </div>
+                        <span class="status-indicator"></span>
+                    </article>
+
+                    <article class="monitor-status">
+                        <span class="monitor-icon">◇</span>
+                        <div>
+                            <strong data-i18n="monitor_security">Security</strong>
+                            <p>Demo Status</p>
+                        </div>
+                        <span class="status-indicator"></span>
+                    </article>
+
+                    <article class="monitor-status">
+                        <span class="monitor-icon">☁</span>
+                        <div>
+                            <strong data-i18n="monitor_cloud">Cloud</strong>
+                            <p>Concept</p>
+                        </div>
+                        <span class="status-indicator"></span>
+                    </article>
+
+                </div>
+
+
+                <!-- Monitoring information -->
+                <div class="monitor-details">
+
+                    <div class="monitor-panel">
+
+                        <h4 data-i18n="traffic_title">Network Traffic</h4>
+
+                        <div class="traffic-chart">
+
+                            <div class="chart-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <svg viewBox="0 0 600 180"
+                                role="img"
+                                aria-label="Illustrative network traffic graph">
+
+                                <defs>
+                                    <linearGradient id="traffic-fill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+
+                                <path
+                                    d="M0 140 C50 125 70 90 120 110 S200 140 250 80 S340 120 390 70 S480 100 530 55 S570 65 600 35 L600 180 L0 180 Z"
+                                    fill="url(#traffic-fill)"/>
+
+                                <path
+                                    d="M0 140 C50 125 70 90 120 110 S200 140 250 80 S340 120 390 70 S480 100 530 55 S570 65 600 35"
+                                    fill="none"
+                                    stroke="#06B6D4"
+                                    stroke-width="4"
+                                    stroke-linecap="round"/>
+
+                            </svg>
+
+                        </div>
+
+                        <p class="chart-caption" data-i18n="traffic_caption">
+                            Illustrative traffic pattern — no live measurements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="monitor-panel">
+
+                        <h4>Infrastructure Concepts</h4>
+
+                        <div class="metric-list">
+
+                            <div class="metric-item">
+                                <span>CPU Monitoring</span>
+                                <span>Concept</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <span>Memory Monitoring</span>
+                                <span>Concept</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <span>Network Availability</span>
+                                <span>Concept</span>
+                            </div>
+
+                            <div class="metric-item">
+                                <span>Security Events</span>
+                                <span>Concept</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             04. ABOUT ME
         ========================================== -->
 
         <section class="section" id="about">
@@ -189,7 +518,7 @@
             <div class="section-heading reveal">
 
                 <p class="section-label" data-i18n="about_label">
-                    01 / ABOUT ME
+                    03 / ABOUT ME
                 </p>
 
                 <h2 data-i18n="about_title">
@@ -220,15 +549,14 @@
                     <p data-i18n="about_paragraph_2">
                         Before coming to Japan, I studied Computer Science
                         at a Computer University in Myanmar, where I developed
-                        foundational knowledge of programming and computer
-                        technologies.
+                        foundational knowledge of programming and computer technologies.
                     </p>
 
                     <p data-i18n="about_paragraph_3">
                         Currently, I am expanding my technical knowledge
-                        in networking, information security, Linux
-                        administration, and cloud infrastructure through
-                        academic studies and hands-on practice.
+                        in networking, information security, Linux administration,
+                        and cloud infrastructure through academic studies
+                        and hands-on practice.
                     </p>
 
                     <p data-i18n="about_paragraph_4">
@@ -240,71 +568,33 @@
                 </div>
 
 
-                <!-- PERSONAL INFORMATION -->
                 <div class="about-info reveal">
 
                     <div class="info-item">
-
-                        <span class="info-label" data-i18n="info_name">
-                            NAME
-                        </span>
-
-                        <span class="info-value">
-                            HTET (テッ)
-                        </span>
-
+                        <span class="info-label" data-i18n="info_name">NAME</span>
+                        <span class="info-value">HTET (テッ)</span>
                     </div>
 
-
-                   <div class="info-item">
-
-    <span class="info-label" data-i18n="info_education">
-        EDUCATION
-    </span>
-
-    <span class="info-value" data-i18n="info_school">
-        Nihon Kogakuin College
-    </span>
-
-</div>
-
-
                     <div class="info-item">
-
-                        <span class="info-label" data-i18n="info_field">
-                            FIELD
-                        </span>
-
-                        <span class="info-value" data-i18n="info_field_value">
-                            Networking & Security
-                        </span>
-
+                        <span class="info-label" data-i18n="info_education">EDUCATION</span>
+                        <span class="info-value" data-i18n="info_school">Nihon Kogakuin College</span>
                     </div>
 
-
                     <div class="info-item">
-
-                        <span class="info-label" data-i18n="info_location">
-                            LOCATION
-                        </span>
-
-                        <span class="info-value" data-i18n="info_location_value">
-                            Japan
-                        </span>
-
+                        <span class="info-label" data-i18n="info_field">FIELD</span>
+                        <span class="info-value" data-i18n="info_field_value">Networking & Security</span>
                     </div>
 
+                    <div class="info-item">
+                        <span class="info-label" data-i18n="info_location">LOCATION</span>
+                        <span class="info-value" data-i18n="info_location_value">Japan</span>
+                    </div>
 
                     <div class="info-item">
-
-                        <span class="info-label" data-i18n="info_career">
-                            CAREER GOAL
-                        </span>
-
+                        <span class="info-label" data-i18n="info_career">CAREER GOAL</span>
                         <span class="info-value" data-i18n="info_career_value">
                             Network & Cloud Infrastructure Engineer
                         </span>
-
                     </div>
 
                 </div>
@@ -315,7 +605,7 @@
 
 
         <!-- =========================================
-             SKILLS SECTION
+             05. TECHNICAL SKILLS
         ========================================== -->
 
         <section class="section" id="skills">
@@ -323,7 +613,7 @@
             <div class="section-heading reveal">
 
                 <p class="section-label" data-i18n="skills_label">
-                    02 / TECHNICAL SKILLS
+                    04 / TECHNICAL SKILLS
                 </p>
 
                 <h2 data-i18n="skills_title">
@@ -339,23 +629,13 @@
 
             <div class="skills-grid">
 
-
-                <!-- NETWORKING -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">01 / NET</div>
-
-                    <h3 data-i18n="skill_networking_title">
-                        Networking
-                    </h3>
-
+                    <h3 data-i18n="skill_networking_title">Networking</h3>
                     <p data-i18n="skill_networking_description">
-                        Learning network fundamentals, routing,
-                        switching, and network design.
+                        Learning network fundamentals, routing, switching, and network design.
                     </p>
-
                     <div class="skill-tags">
-
                         <span>TCP/IP</span>
                         <span>IPv4</span>
                         <span>Subnetting</span>
@@ -364,140 +644,84 @@
                         <span>Switching</span>
                         <span>OSPF</span>
                         <span>Packet Tracer</span>
-
                     </div>
-
                 </article>
 
 
-                <!-- NETWORK SECURITY -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">02 / SEC</div>
-
-                    <h3 data-i18n="skill_security_title">
-                        Network Security
-                    </h3>
-
+                    <h3 data-i18n="skill_security_title">Network Security</h3>
                     <p data-i18n="skill_security_description">
-                        Studying network protection and
-                        fundamental security technologies.
+                        Studying network protection and fundamental security technologies.
                     </p>
-
                     <div class="skill-tags">
-
                         <span>ACL</span>
                         <span>Firewall Fundamentals</span>
                         <span>Network Segmentation</span>
                         <span>Security Fundamentals</span>
-
                     </div>
-
                 </article>
 
 
-                <!-- LINUX -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">03 / LINUX</div>
-
-                    <h3 data-i18n="skill_linux_title">
-                        Linux Administration
-                    </h3>
-
+                    <h3 data-i18n="skill_linux_title">Linux Administration</h3>
                     <p data-i18n="skill_linux_description">
-                        Practicing Linux command-line operations
-                        and system administration.
+                        Practicing Linux command-line operations and system administration.
                     </p>
-
                     <div class="skill-tags">
-
                         <span>Ubuntu</span>
                         <span>Linux CLI</span>
                         <span>File Management</span>
                         <span>Permissions</span>
                         <span>System Services</span>
-
                     </div>
-
                 </article>
 
 
-                <!-- CLOUD -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">04 / CLOUD</div>
-
-                    <h3 data-i18n="skill_cloud_title">
-                        Cloud Infrastructure
-                    </h3>
-
+                    <h3 data-i18n="skill_cloud_title">Cloud Infrastructure</h3>
                     <p data-i18n="skill_cloud_description">
-                        Building foundational knowledge of
-                        AWS cloud services and architecture.
+                        Building foundational knowledge of AWS cloud services and architecture.
                     </p>
-
                     <div class="skill-tags">
-
                         <span>AWS Fundamentals</span>
                         <span>EC2 Concepts</span>
                         <span>S3 Concepts</span>
                         <span>VPC Concepts</span>
-
                     </div>
-
                 </article>
 
 
-                <!-- PROGRAMMING -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">05 / CODE</div>
-
-                    <h3 data-i18n="skill_programming_title">
-                        Programming & Web
-                    </h3>
-
+                    <h3 data-i18n="skill_programming_title">Programming & Web</h3>
                     <p data-i18n="skill_programming_description">
-                        Learning programming fundamentals
-                        and developing web projects.
+                        Learning programming fundamentals and developing web projects.
                     </p>
-
                     <div class="skill-tags">
-
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
                         <span>Python Fundamentals</span>
-
                     </div>
-
                 </article>
 
 
-                <!-- TOOLS -->
                 <article class="skill-card reveal">
-
                     <div class="skill-icon">06 / TOOLS</div>
-
-                    <h3 data-i18n="skill_tools_title">
-                        Development Tools
-                    </h3>
-
+                    <h3 data-i18n="skill_tools_title">Development Tools</h3>
                     <p data-i18n="skill_tools_description">
-                        Tools used for technical practice,
-                        development, and version control.
+                        Tools used for technical practice, development, and version control.
                     </p>
-
                     <div class="skill-tags">
-
+                        <span>Ubuntu</span>
                         <span>Git</span>
                         <span>GitHub</span>
                         <span>VS Code</span>
                         <span>Cisco Packet Tracer</span>
-
                     </div>
-
                 </article>
 
             </div>
@@ -506,7 +730,7 @@
 
 
         <!-- =========================================
-             PROJECTS SECTION
+             06. FEATURED PROJECTS
         ========================================== -->
 
         <section class="section" id="projects">
@@ -514,7 +738,7 @@
             <div class="section-heading reveal">
 
                 <p class="section-label" data-i18n="projects_label">
-                    03 / PROJECTS
+                    05 / PROJECTS
                 </p>
 
                 <h2 data-i18n="projects_title">
@@ -530,43 +754,30 @@
 
             <div class="projects-grid">
 
-
-                <!-- CISCO NETWORK LAB -->
                 <article class="project-card reveal">
 
                     <div class="project-top">
-
                         <span class="project-category">NETWORKING</span>
-
                         <span class="project-number">01</span>
-
                     </div>
 
                     <div class="project-visual">
-
                         <span>⌘</span>
-
                         <p>NETWORK TOPOLOGY</p>
-
                     </div>
 
-                    <h3 data-i18n="project_network_title">
-                        Cisco Network Lab
-                    </h3>
+                    <h3 data-i18n="project_network_title">Cisco Network Lab</h3>
 
                     <p data-i18n="project_network_description">
                         Practicing router and switch configurations,
-                        IPv4 addressing, subnetting, VLANs,
-                        and connectivity troubleshooting.
+                        IPv4 addressing, subnetting, VLANs, and connectivity troubleshooting.
                     </p>
 
                     <div class="skill-tags">
-
                         <span>Cisco</span>
                         <span>Packet Tracer</span>
                         <span>Routing</span>
                         <span>Switching</span>
-
                     </div>
 
                     <span class="project-status" data-i18n="status_learning">
@@ -576,41 +787,29 @@
                 </article>
 
 
-                <!-- LINUX LAB -->
                 <article class="project-card reveal">
 
                     <div class="project-top">
-
                         <span class="project-category">LINUX</span>
-
                         <span class="project-number">02</span>
-
                     </div>
 
                     <div class="project-visual">
-
                         <span>$_</span>
-
                         <p>LINUX ENVIRONMENT</p>
-
                     </div>
 
-                    <h3 data-i18n="project_linux_title">
-                        Linux Administration Lab
-                    </h3>
+                    <h3 data-i18n="project_linux_title">Linux Administration Lab</h3>
 
                     <p data-i18n="project_linux_description">
                         Practicing Linux commands, file management,
-                        permissions, system services, and
-                        basic system administration.
+                        permissions, system services, and basic system administration.
                     </p>
 
                     <div class="skill-tags">
-
                         <span>Ubuntu</span>
                         <span>Linux CLI</span>
                         <span>Shell</span>
-
                     </div>
 
                     <span class="project-status" data-i18n="status_learning">
@@ -620,42 +819,30 @@
                 </article>
 
 
-                <!-- AWS LAB -->
                 <article class="project-card reveal">
 
                     <div class="project-top">
-
                         <span class="project-category">CLOUD</span>
-
                         <span class="project-number">03</span>
-
                     </div>
 
                     <div class="project-visual">
-
                         <span>☁</span>
-
                         <p>CLOUD INFRASTRUCTURE</p>
-
                     </div>
 
-                    <h3 data-i18n="project_cloud_title">
-                        AWS Cloud Learning
-                    </h3>
+                    <h3 data-i18n="project_cloud_title">AWS Cloud Learning</h3>
 
                     <p data-i18n="project_cloud_description">
-                        Studying cloud computing concepts,
-                        AWS core services, and infrastructure
-                        architecture fundamentals.
+                        Studying cloud computing concepts, AWS core services,
+                        and infrastructure architecture fundamentals.
                     </p>
 
                     <div class="skill-tags">
-
                         <span>AWS</span>
-                        <span>EC2</span>
-                        <span>S3</span>
-                        <span>VPC</span>
-
+                        <span>EC2 Concepts</span>
+                        <span>S3 Concepts</span>
+                        <span>VPC Concepts</span>
                     </div>
 
                     <span class="project-status" data-i18n="status_progress">
@@ -670,7 +857,7 @@
 
 
         <!-- =========================================
-             CERTIFICATIONS SECTION
+             07. CERTIFICATIONS
         ========================================== -->
 
         <section class="section" id="certifications">
@@ -678,7 +865,7 @@
             <div class="section-heading reveal">
 
                 <p class="section-label" data-i18n="certifications_label">
-                    04 / CERTIFICATION ROADMAP
+                    06 / CERTIFICATION ROADMAP
                 </p>
 
                 <h2 data-i18n="certifications_title">
@@ -694,76 +881,62 @@
 
             <div class="cert-list">
 
-
-                <!-- CCNA -->
-                <div class="cert-item reveal">
+                <article class="cert-item reveal">
 
                     <div class="cert-symbol">CC</div>
 
                     <div class="cert-details">
-
                         <h3>Cisco CCNA 200-301</h3>
-
                         <p data-i18n="cert_ccna_description">
                             Networking fundamentals, IP connectivity,
                             security, and automation.
                         </p>
-
                     </div>
 
                     <span class="cert-status" data-i18n="status_preparing">
                         Preparing
                     </span>
 
-                </div>
+                </article>
 
 
-                <!-- AWS SAA -->
-                <div class="cert-item reveal">
+                <article class="cert-item reveal">
 
                     <div class="cert-symbol">AWS</div>
 
                     <div class="cert-details">
-
                         <h3>AWS Solutions Architect – Associate</h3>
-
                         <p data-i18n="cert_aws_description">
-                            Cloud architecture, AWS services,
-                            and infrastructure design.
+                            Cloud architecture, AWS services, and infrastructure design.
                         </p>
-
                     </div>
 
                     <span class="cert-status" data-i18n="status_planned">
                         Planned
                     </span>
 
-                </div>
+                </article>
 
 
-                <!-- FE -->
-                <div class="cert-item reveal">
+                <article class="cert-item reveal">
 
                     <div class="cert-symbol">FE</div>
 
                     <div class="cert-details">
-
                         <h3 data-i18n="cert_fe_title">
                             Fundamental Information Technology Engineer (FE)
                         </h3>
-
                         <p data-i18n="cert_fe_description">
                             Core IT knowledge, algorithms, programming,
                             databases, networking, and information security.
                         </p>
-
                     </div>
 
                     <span class="cert-status" data-i18n="status_planned">
                         Planned
                     </span>
 
-                </div>
+                </article>
 
             </div>
 
@@ -771,7 +944,7 @@
 
 
         <!-- =========================================
-             LAB JOURNAL SECTION
+             08. LAB JOURNAL
         ========================================== -->
 
         <section class="section" id="journal">
@@ -779,7 +952,7 @@
             <div class="section-heading reveal">
 
                 <p class="section-label" data-i18n="journal_label">
-                    05 / LAB JOURNAL
+                    07 / LAB JOURNAL
                 </p>
 
                 <h2 data-i18n="journal_title">
@@ -795,8 +968,6 @@
 
             <div class="journal-grid">
 
-
-                <!-- SUBNETTING -->
                 <article class="journal-card reveal">
 
                     <span class="journal-category">NETWORKING</span>
@@ -810,14 +981,11 @@
                         host ranges, and subnet calculations.
                     </p>
 
-                    <span class="journal-tech">
-                        TCP/IP · IPv4 · CIDR
-                    </span>
+                    <span class="journal-tech">TCP/IP · IPv4 · CIDR</span>
 
                 </article>
 
 
-                <!-- CISCO CONFIGURATION -->
                 <article class="journal-card reveal">
 
                     <span class="journal-category">CISCO LAB</span>
@@ -831,14 +999,11 @@
                         routing, and network connectivity testing.
                     </p>
 
-                    <span class="journal-tech">
-                        Cisco IOS · VLAN · Ping
-                    </span>
+                    <span class="journal-tech">Cisco IOS · VLAN · Ping</span>
 
                 </article>
 
 
-                <!-- LINUX ADMINISTRATION -->
                 <article class="journal-card reveal">
 
                     <span class="journal-category">LINUX</span>
@@ -852,9 +1017,7 @@
                         file permissions, and system services.
                     </p>
 
-                    <span class="journal-tech">
-                        Ubuntu · CLI · Services
-                    </span>
+                    <span class="journal-tech">Ubuntu · CLI · Services</span>
 
                 </article>
 
@@ -864,7 +1027,7 @@
 
 
         <!-- =========================================
-             CONTACT SECTION
+             09. CONTACT
         ========================================== -->
 
         <section class="section contact-section" id="contact">
@@ -872,7 +1035,7 @@
             <div class="contact-content reveal">
 
                 <p class="section-label" data-i18n="contact_label">
-                    06 / CONTACT
+                    08 / CONTACT
                 </p>
 
                 <h2 data-i18n="contact_title">
@@ -880,35 +1043,26 @@
                 </h2>
 
                 <p data-i18n="contact_description">
-                    I am always interested in learning, sharing knowledge,
+                    I am interested in learning, sharing knowledge,
                     and connecting with people in networking,
                     security, and cloud infrastructure.
                 </p>
 
                 <div class="contact-buttons">
 
-                    <!-- Replace with your real email -->
-                    <a href="mailto:YOUR_EMAIL@example.com"
-                       class="btn btn-primary">
-
-                        <span data-i18n="contact_button">
-                            Get In Touch
-                        </span>
-
+                    <!-- Replace with your actual email -->
+                    <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary">
+                        <span data-i18n="contact_button">Get In Touch</span>
                         <span>→</span>
-
                     </a>
 
-
-                    <!-- Replace # with your actual GitHub profile URL -->
-                    <a href="#"
-                       class="btn btn-outline"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       data-i18n="github_button">
-
+                    <!-- Replace with your GitHub profile URL -->
+                    <a href="https://github.com/htetzayarwin"
+                        class="btn btn-outline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-i18n="github_button">
                         GitHub Profile
-
                     </a>
 
                 </div>
@@ -927,16 +1081,24 @@
     <footer class="footer">
 
         <a href="#home" class="footer-logo">
-            HTET<span>.</span>DEV
+            &lt;/&gt; HTET<span>.DEV</span>
         </a>
 
         <p data-i18n="footer_design">
             Designed & Built by HTET (テッ)
         </p>
 
+        <div class="footer-social">
+            <a href="https://github.com/htetzayarwin"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+                GitHub
+            </a>
+        </div>
+
         <p class="copyright">
-            © <span id="current-year">2026</span>
-            HTET.
+            © <span id="current-year">2026</span> HTET.DEV.
             <span data-i18n="footer_rights">All rights reserved.</span>
         </p>
 
